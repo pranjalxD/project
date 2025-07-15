@@ -93,7 +93,7 @@ module.exports.search = async (req, res) => {
   if (input == "" || input == " ") {
     //search value is empty
     req.flash("error", "Search value empty!!!");
-    res.redirect("/listings");
+    return res.redirect("/listings");
   }
 
   //convert every word first letter capital and other small
